@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+
+ <Styles>
+  <Style ss:ID="Header">
+   <Font ss:Bold="1"/>
+   <Interior ss:Color="#D9D9D9" ss:Pattern="Solid"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+
+  <Style ss:ID="Cell">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+
+  <Style ss:ID="Currency">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <NumberFormat ss:Format="0"/>
+  </Style>
+
+  <Style ss:ID="Bold">
+   <Font ss:Bold="1"/>
+  </Style>
+ </Styles>
+
+ <Worksheet ss:Name="Inventory">
+  <Table>
+
+   <Column ss:Width="180"/>
+   <Column ss:Width="130"/>
+   <Column ss:Width="150"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="120"/>
+   <Column ss:Width="250"/>
+
+   <Row>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">item</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">cost</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">sale price</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">qty</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">profit</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">notes</Data></Cell>
+   </Row>
+
+   <Row>
+    <Cell ss:StyleID="Cell"><Data ss:Type="String">pink keyboard</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">180</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[-2]*(RC[-1]-RC[-3])" ss:StyleID="Currency"/>
+    <Cell ss:StyleID="Cell"><Data ss:Type="String">need 2 (AAA batteries)</Data></Cell>
+   </Row>
+
+   <Row>
+    <Cell ss:StyleID="Cell"><Data ss:Type="String">cherry wrist pad</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[-2]*(RC[-1]-RC[-3])" ss:StyleID="Currency"/>
+    <Cell ss:StyleID="Cell"/>
+   </Row>
+
+   <Row>
+    <Cell ss:StyleID="Cell"><Data ss:Type="String">clip on fan</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Formula="=RC[-2]*(RC[-1]-RC[-3])" ss:StyleID="Currency"/>
+    <Cell ss:StyleID="Cell"/>
+   </Row>
+
+   <Row>
+    <Cell ss:StyleID="Cell"><Data ss:Type="String">blue keyboard</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">180</Data></Cell>
+    <Cell ss:StyleID="Currency"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[-2]*(RC[-1]-RC[-3])" ss:StyleID="Currency"/>
+    <Cell ss:StyleID="Cell"><Data ss:Type="String">need 2 (AAA batteries)</Data></Cell>
+   </Row>
+
+   <Row>
+    <Cell/>
+    <Cell/>
+    <Cell/>
+    <Cell ss:StyleID="Bold">
+     <Data ss:Type="String">Total after costs:</Data>
+    </Cell>
+    <Cell ss:Formula="=SUM(R2C5:R5C5)" ss:StyleID="Currency"/>
+   </Row>
+
+  </Table>
+ </Worksheet>
+
+</Workbook>
